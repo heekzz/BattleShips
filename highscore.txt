@@ -1,0 +1,3 @@
+Username:Allan
+Hitpercent:94.0
+Shots:18
