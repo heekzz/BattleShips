@@ -3,6 +3,11 @@ package BattleShips;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * Missbutton is a button extending GameButton and 
+ * acts as a miss in the game. It displays an icon representing
+ * a miss when clicked and also adds misses to the stats.  
+ */
 @SuppressWarnings("serial")
 public class MissButton extends GameButton {
 	

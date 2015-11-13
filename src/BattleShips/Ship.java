@@ -1,5 +1,11 @@
 package BattleShips;
 
+
+/**
+ * Ship are on of our main components here and contains the properties
+ * a commmon battleships ship has such as name, length, damage taken, 
+ * is it sunk and it's position. 
+ */
 public class Ship {
 	private char shipType;
 	private char shipAlignment, shipRow, shipCol;

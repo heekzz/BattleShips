@@ -6,6 +6,11 @@ import java.net.URL;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
+/**
+ * Abstract class that extends a JButton and act as a 
+ * template for the other buttons (Shipbutton and Missbutton)
+ * It defines the properties for the buttons used in the game.
+ */
 @SuppressWarnings("serial")
 public abstract class GameButton extends JButton{
 	protected ImageIcon missIcon, hitIcon;

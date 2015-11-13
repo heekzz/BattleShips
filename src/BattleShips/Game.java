@@ -4,6 +4,12 @@ import java.awt.event.WindowEvent;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 
+
+/**
+ *	Game handles the initial startup of the game and creates all componets in the beginning. 
+ *	It also keeps track of the games status and connects all the components to communicate
+ *	with each other and are the base of the base logics.
+ */
 public class Game {
 	/* Here you can customize what ship you want to have in your game
 	 * A = Aircraft carrier
@@ -44,7 +50,7 @@ public class Game {
 	}
 
 	/**
-	 * PLAY THE GAME!!
+	 * Function that runs the main components to start the game. 
 	 */
 	private void play() {
 		bot.placeShips();

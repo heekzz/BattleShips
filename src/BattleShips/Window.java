@@ -1,9 +1,14 @@
-package BattleShips;
+	package BattleShips;
 import java.awt.BorderLayout;
 import java.awt.Container;
 import javax.swing.JFrame;
 
-
+/**
+ * Window class is the graphic base we are using and is 
+ * extending JFrame from the Swing library. It contains some pretty standard
+ * stuff for creating a JFrame and also where to place our boards
+ * and stats panels. 
+ */
 @SuppressWarnings("serial")
 public class Window extends JFrame {
 	private Container cont; 

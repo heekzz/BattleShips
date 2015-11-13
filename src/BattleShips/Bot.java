@@ -3,6 +3,14 @@ package BattleShips;
 import java.util.Random;
 import java.util.Stack;
 
+/**
+ * A bot with a simple AI.
+ * Whenever a players has shot at it's board
+ * the bot also shoots. The bot class also places ships on the
+ * the board for the player to try hitting.
+ * The bot shoots at a random position but if it hits
+ * the bot shoots around the hit in order to locate the ship.
+ */
 public class Bot {
 
 	private Game game;
@@ -100,7 +108,7 @@ public class Bot {
 			// It's a HIT!
 			if(board_copy[randRow][randCol] != '-') {
 				playerBoard.getButtons()[randRow][randCol].botShot();
-				initQueue(randRow, randCol);
+				initStack(randRow, randCol);
 				used[randRow][randCol] = 'X';
 			}
 			// It's a miss
@@ -116,7 +124,7 @@ public class Bot {
 	 * @param hitRow row we hit
 	 * @param hitCol col we hit
 	 */
-	private void initQueue(int hitRow, int hitCol) {
+	private void initStack(int hitRow, int hitCol) {
 		if(hitRow != 9 && used[hitRow+1][hitCol] == 0) {
 			stack.add(new Position(hitRow + 1, hitCol, 'S'));
 		}
@@ -131,6 +139,9 @@ public class Bot {
 		}
 	}
 
+	/**
+	 * Clear the stack
+	 */
 	public void clearStack() {
 		stack.clear();
 	}

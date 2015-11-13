@@ -10,7 +10,12 @@ import javax.swing.border.Border;
 import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
 
-
+/**
+ * Board contains 10x10 buttons in a gridlayout and displays and
+ * contains all the buttons we are pressing in the game. 
+ * It aligns all the buttons and checks for valid positions for 
+ * the ship to be placed at to avoid overlapping ships. 
+ */
 @SuppressWarnings("serial")
 public class Board extends JPanel {
 	// Uses to print an letter instead of number for the rows
@@ -25,7 +30,11 @@ public class Board extends JPanel {
 	private char[][] board;
 	
 	private GameButton[][] buttons;
-
+	
+	/**
+	 * Create a Board containing an empty char array and
+	 * graphcical columns and rows description. 
+	 */
 	public Board() {
 		board = new char[10][10];
 		buttons = new GameButton[10][10];

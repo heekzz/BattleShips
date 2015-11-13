@@ -8,7 +8,9 @@ import javax.swing.JOptionPane;
 /**
  * Shipbutton extends JButton but we want to
  * add more stuff to the JButton so we create a
- * customize class instead
+ * customize class instead. The Shipbutton is connected 
+ * with a Ship and if it's pressed it registrates at hit 
+ * at the specific ship.
  */
 @SuppressWarnings("serial")
 public class ShipButton extends GameButton {
@@ -38,8 +40,8 @@ public class ShipButton extends GameButton {
 								JOptionPane.PLAIN_MESSAGE); // Notify that you sank a ship
 						game.playerShipHasBeenSunk();
 						game.checkGameStatus();	// Check if someone won
-						game.getBot().shoot();
 					}
+					game.getBot().shoot();
 				} else {
 					botShot = false;
 					game.getStats().addCompHit();

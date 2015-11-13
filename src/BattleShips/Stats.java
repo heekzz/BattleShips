@@ -13,8 +13,9 @@ import java.io.IOException;
 import javax.swing.*;
 
 /**
- * Handles the left part of the game where the statistics are shown with graphical 
- * presentation and will be updated when actions are performed
+ * Handles the top part of the game where the statistics are shown with graphical 
+ * presentation and will be updated when actions are performed.
+ * Handles both the logic and the graphical displayment. 
  */
 @SuppressWarnings("serial")
 public class Stats extends JPanel {
@@ -62,7 +63,6 @@ public class Stats extends JPanel {
 
 
 	public Stats() {
-		// Hard coded size, oops
 		Dimension size = getMaximumSize();
 		size.height = 120;
 		setPreferredSize(size);
@@ -267,7 +267,6 @@ public class Stats extends JPanel {
 					break;
 				}
 
-				System.out.println(line);
 			}
 		} catch (FileNotFoundException e) {
 			System.out.println("Highscore file not found!");
@@ -311,6 +310,3 @@ public class Stats extends JPanel {
 	}
 
 }
-
-
-
